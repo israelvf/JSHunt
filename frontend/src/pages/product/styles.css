@@ -5,9 +5,36 @@
   background: #fff;
   border-radius: 5px;
   border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
 }
 
-.product-info h1 {
+.product-info .product-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product-info .product-header a {
+  text-decoration: none;
+  color: #069;
+}
+
+.product-info .product-header a i {
+  border: solid #da552f;
+  border-width: 0 3px 3px 0;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 4px;
+}
+
+.product-info .product-header .left-arrow {
+  margin-top: 10px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.product-info .product-header h1 {
   font-size: 32px;
 }
 
@@ -15,6 +42,7 @@
   color: #666;
   line-height: 24px;
   margin-top: 5px;
+  align-self: center;
 }
 
 .product-info p a {

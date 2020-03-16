@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -21,7 +22,13 @@ export default class Product extends Component {
 
     return (
       <div className='product-info'>
-        <h1>{product.title}</h1>
+        <div className='product-header'>
+          <Link to='/'>
+            <i className='left-arrow'></i>
+          </Link>
+          <h1>{product.title}</h1>
+          <div></div>
+        </div>
         <p>{product.description}</p>
 
         <p>
