@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - '3000:80'
+    networks:
+      - jshunt
+    environment:
+      - 'BACKEND_ADDRESS=localhost:3001'
+
+  backend:
+    build:
+      context: ./backend
+    entrypoint: [ "npm", "run", "demo" ]
+    ports:
+      - '3001:3001'
+    networks:
+      - jshunt
+    environment:
+      - 'MONGODB_HOST=mongodb'
+    depends_on:
+      - mongodb
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+
+  mongodb:
+    image: mongo
+    networks:
+      - jshunt
+
+networks:
+  jshunt:

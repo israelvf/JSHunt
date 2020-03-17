@@ -1,5 +1,7 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: 'http://localhost:3001/api' });
+const backend = process.env.BACKEND_ADDRESS || 'localhost:3001';
+
+const api = axios.create({ baseURL: `http://${backend}/api` });
 
 export default api;
