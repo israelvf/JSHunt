@@ -3,13 +3,13 @@ JSHunt - Following Node, ReactJS and React Native free courses on Rocketseat.
 
 ## Running Application
 ### Method 1
-- Install docker and docker-compose
+- Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/)
 - `git clone` this repo
 - Run `docker-compose build` and `docker-compose up`
 - Open your browser in http://localhost:3000
 
 ### Method 2
-- Install docker
+- Install [docker](https://docs.docker.com/install/)
 - `git clone` this repo
 - Go to backend folder and run the following commands:
 ```sh
@@ -36,7 +36,7 @@ docker run --name frontend -e BACKEND_ADDRESS=localhost:3001 -p 3000:80 -d front
 - Open your browser in http://localhost:3000 
 
 ### Method 3
-- Install node, yarn and mongodb
+- Install [node](https://nodejs.org/en/download/), [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) and [mongodb](https://docs.mongodb.com/manual/installation/)
 - Start mongodb
 - Go to backend folder, run `npm install` and `npm run demo`
 - Go to frontend folder, run `yarn install` and `npm start`
