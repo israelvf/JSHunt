@@ -1,4 +1,4 @@
-from node:current-alpine as build
+FROM node:current-alpine as build
 
 COPY . /app
 
